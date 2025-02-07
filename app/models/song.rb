@@ -1,7 +1,7 @@
-require 'csv'
+require "csv"
 
 class Song < ApplicationRecord
-	include Searchable
+  include Searchable
 
   def self.import_csv!
     # filepath = File.expand_path("~/Downloads/Music Dataset Lyrics and Metadata.csv")
@@ -15,5 +15,5 @@ class Song < ApplicationRecord
         lyrics: s["lyrics"]
       )
     end
-  end	
+  end
 end
